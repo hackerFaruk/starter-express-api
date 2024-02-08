@@ -4,9 +4,11 @@ const cors = require('cors');
 const app = express()
 app.use(cors());
 
+// this solves corse problem
 app.use(cors({ origin: "http://127.0.0.1:5500", credentials: true }))
 
-// Enable CORS middleware
+//
+/* Enable CORS middleware
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*'); // Allow requests from any origin
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); // Allow specific HTTP methods
@@ -14,7 +16,7 @@ app.use((req, res, next) => {
     next();
 });
 
-
+*/ 
 // all answers all html methods 
 app.all('/', (req, res) => {
     console.log("Just got a request!")
