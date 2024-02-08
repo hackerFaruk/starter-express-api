@@ -6,7 +6,10 @@ app.use(cors());
 
 app.use(cors({ origin: "https://paranceys-cool-api.cyclic.app", credentials: true }))
 
-
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'https://paranceys-cool-api.cyclic.app');
+    next();
+});
 
 
 // all answers all html methods 
