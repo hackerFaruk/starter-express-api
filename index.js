@@ -30,7 +30,8 @@ const myNames = ['hackerFaruk', 'Onuralp', 'Parancey', 'Onuralp Arslan'];
 
 // get answers get html method
 app.get('/name', (req, res) => {
-    res.send(getRandomName(myNames));
+    const name = getRandomName(myNames);
+    res.json({name});
 });
 
 
