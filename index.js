@@ -11,6 +11,16 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+    next();
+});
+
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'https://hackerfaruk.github.io');
+    next();
+});
+
 
 // all answers all html methods 
 app.all('/', (req, res) => {
