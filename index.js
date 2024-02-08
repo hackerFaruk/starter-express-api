@@ -7,7 +7,7 @@ app.use(cors());
 // this allows cors for my live server
 app.use(cors({ origin: "http://127.0.0.1:5500", credentials: true }))
 // this allows cors for my github page
-app.use(cors({ origin: "https://hackerfaruk.github.io/", credentials: true }))
+app.use(cors({ origin: "https://hackerfaruk.github.io", credentials: true }))
 
 
 // all answers all html methods 
