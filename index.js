@@ -4,19 +4,12 @@ const cors = require('cors');
 const app = express()
 app.use(cors());
 
-// this solves corse problem
+// this allows cors for my live server
 app.use(cors({ origin: "http://127.0.0.1:5500", credentials: true }))
+// this allows cors for my github page
+app.use(cors({ origin: "https://hackerfaruk.github.io/", credentials: true }))
 
-//
-/* Enable CORS middleware
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*'); // Allow requests from any origin
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); // Allow specific HTTP methods
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Allow specific headers
-    next();
-});
 
-*/ 
 // all answers all html methods 
 app.all('/', (req, res) => {
     console.log("Just got a request!")
